@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{70D7C7A0-3FAE-42BD-8C2F-C26F73383E83}|https" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="src/Program.cs">
     <Files>
-      <File FileName="src/Properties/launchSettings.json" Line="27" Column="21" />
-      <File FileName="src/appsettings.json" Line="9" Column="1" />
+      <File FileName="src/Properties/launchSettings.json" Line="28" Column="1" />
+      <File FileName="src/appsettings.json" Line="11" Column="1" />
       <File FileName="src/Program.cs" Line="21" Column="2" />
     </Files>
     <Pads>
@@ -17,7 +19,6 @@
             <Node name="src" expanded="True">
               <Node name="Properties" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

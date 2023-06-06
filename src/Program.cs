@@ -11,7 +11,7 @@ internal class Program
 
         app.MapGet("/products", async (context) =>
         {
-            var productId = context.Request.Form["PRODUCTID"];
+            var productId = context.Request.Form["productId"];
             Console.WriteLine(productId);
             await context.Response.WriteAsync($"productId{productId}");
         });

@@ -1,11 +1,13 @@
 using System.Text.Json;
 using src;
+using src.Middlewares;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        //builder.Services.AddTransient<FirstMiddleware>();
         var app = builder.Build();
 
         app.MapGet("/", () => "Hello World!");
@@ -26,8 +28,8 @@ internal class Program
         //        await context.Response.WriteAsync(product);
         //});
 
-        app.MapGet("/products", async (HttpContext context, string name) =>
-        {            
+        app.MapGet("/products/{name}", async (HttpContext context, string name) =>
+        {
             Console.WriteLine(name);
             var product = products.Find(item => item == name);
             if (product == null)
@@ -40,7 +42,7 @@ internal class Program
         });
         app.MapGet("/getProducts", async (HttpContext context) =>
         {
-            context.Response.Headers["testing-header"] = products[0];
+            //context.Response.Headers["testing-header"] = products[0];
             await context.Response.WriteAsync(JsonSerializer.Serialize(products));
         });
 
@@ -54,12 +56,23 @@ internal class Program
             await context.Response.WriteAsync("Product Created!");
         });
 
+        app.MapGet("/files/{fileName}.{extension}", async (HttpContext context, string fileName, string extension) =>
+        {
+            await context.Response.WriteAsync($"file name: {fileName} with Extension: {extension} has been requested");
+        });
+
+        app.MapGet("/v2/files/{fileName=solidDefault}", async (HttpContext context, string fileName) =>
+        {
+            await context.Response.WriteAsync($"file name: {fileName}");
+        });
         //var firstMiddleware = new MiddleWare1();
         //var secondMiddleware = new MiddleWare2();
 
         //firstMiddleware.SetNext(secondMiddleware);
         //firstMiddleware.Handle();
 
+        //app.UseFirstMiddlware();       
+        app.UseStaticFiles();
         app.Run();
     }
 }

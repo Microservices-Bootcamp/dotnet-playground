@@ -9,9 +9,19 @@
 
     <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
     <ItemGroup>
+      <Content Remove="wwwroot\" />
+    </ItemGroup>
+    <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Middlewares\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Middlewares\" />
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
 </Project>

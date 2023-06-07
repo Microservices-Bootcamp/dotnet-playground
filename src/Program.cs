@@ -61,7 +61,7 @@ internal class Program
             await context.Response.WriteAsync($"file name: {fileName} with Extension: {extension} has been requested");
         });
 
-        app.MapGet("/v2/files/{fileName=solidDefault}", async (HttpContext context, string fileName) =>
+        app.MapGet("/v2/files/{fileName?=solidDefault}", async (HttpContext context, string fileName) =>
         {
             await context.Response.WriteAsync($"file name: {fileName}");
         });
@@ -70,7 +70,7 @@ internal class Program
 
         //firstMiddleware.SetNext(secondMiddleware);
         //firstMiddleware.Handle();
-
+        //app.UseMiddleware<FirstMiddleware>();
         //app.UseFirstMiddlware();       
         app.UseStaticFiles();
         app.Run();

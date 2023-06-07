@@ -1,1 +1,20 @@
-GET http://localhost:5121/products
+Post http://localhost:5121/products
+Content-Type: application/json
+
+{
+    "name":"Product D"
+}
+
+###
+GET http://localhost:5121/getProducts HTTP/1.1
+ 
+###
+GET http://localhost:5121/products/product A
+
+
+###
+GET http://localhost:5121/v2/files/HAssan
+
+
+###
+GET http://localhost:5121/ourfile.txt

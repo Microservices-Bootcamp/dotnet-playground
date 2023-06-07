@@ -1,32 +1,30 @@
-﻿<Properties StartupConfiguration="{70D7C7A0-3FAE-42BD-8C2F-C26F73383E83}|https" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{70D7C7A0-3FAE-42BD-8C2F-C26F73383E83}|http">
   <MonoDevelop.Ide.ItemProperties.src PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/Program.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/appsettings.json">
     <Files>
-      <File FileName="src/Properties/launchSettings.json" Line="31" Column="47" />
-      <File FileName="src/appsettings.json" />
-      <File FileName="src/Program.cs" Line="19" Column="19" />
-      <File FileName="src/Dockerfile" Line="21" Column="1" />
-      <File FileName=".vs/PlayGround/xs/UserPrefs.xml" Line="1" Column="1" />
+      <File FileName="src/Properties/launchSettings.json" Line="17" Column="7" />
+      <File FileName="src/appsettings.json" Line="10" Column="1" />
+      <File FileName="src/Program.cs" Line="13" Column="9" />
+      <File FileName="src/Dockerfile" />
+      <File FileName=".vs/PlayGround/xs/UserPrefs.xml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PlayGround" expanded="True">
             <Node name="src" expanded="True">
-              <Node name="Properties" expanded="True">
-                <Node name="launchSettings.json" selected="True" />
-              </Node>
-              <Node name="appsettings.json" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

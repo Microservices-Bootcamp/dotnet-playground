@@ -1,4 +1,5 @@
 using System.Text.Json;
+using src;
 
 internal class Program
 {
@@ -52,6 +53,12 @@ internal class Program
             context.Response.StatusCode = StatusCodes.Status201Created;
             await context.Response.WriteAsync("Product Created!");
         });
+
+        //var firstMiddleware = new MiddleWare1();
+        //var secondMiddleware = new MiddleWare2();
+
+        //firstMiddleware.SetNext(secondMiddleware);
+        //firstMiddleware.Handle();
 
         app.Run();
     }

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.Extensions.Hosting;
 using src;
 using src.Middlewares;
 
@@ -56,9 +57,10 @@ internal class Program
         //    context.Response.StatusCode = StatusCodes.Status201Created;
         //    await context.Response.WriteAsync("Product Created!");
         //});
-
+        app.MapGet("/enviroenments", () => app.Environment.EnvironmentName);
         app.MapGet("/files/{fileName}.{extension}", async (HttpContext context, string fileName, string extension) =>
         {
+          
             await context.Response.WriteAsync($"file name: {fileName} with Extension: {extension} has been requested");
         });
 

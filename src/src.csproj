@@ -19,9 +19,13 @@
 
     <ItemGroup>
       <None Remove="Middlewares\" />
+      <None Remove="Controllers\" />
+      <None Remove="Controllers\Dtos\" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Middlewares\" />
       <Folder Include="wwwroot\" />
+      <Folder Include="Controllers\" />
+      <Folder Include="Controllers\Dtos\" />
     </ItemGroup>
 </Project>
